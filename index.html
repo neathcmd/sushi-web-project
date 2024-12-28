@@ -3,104 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <!--bootstrap link css-->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
+    <title>Sushi Club</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="bg-light">
-    <div class="container-fluid">
-      <header
-        class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow"
-      >
-        <div class="container">
-          <!-- Logo -->
-          <a href="./Index.html" class="navbar-brand fw-bold fs-3"
-            >Sushi club</a
-          >
+  <body>
+    <header>
+      <a href="#" class="logo">Sushi Club</a>
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Genuine</a></li>
+          <li><a href="#">Genuine Pre-Sale</a></li>
 
-          <!-- Toggle Button -->
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <a href="#" class="btn" id="sign-up-btn">Sign up</a>
+        </ul>
+      </nav>
+    </header>
+    <!-- Home Section -->
+    <section class="home">
+      <h1>SUSHI CLUB</h1>
+    </section>
 
-          <!-- Navbar Links -->
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item">
-                <a href="./Index.html" class="nav-link text-dark">Home</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link text-dark">Genuine</a>
-              </li>
-              <li class="nav-item">
-                <a href="#" class="nav-link text-dark">Genuine Pre-Sale</a>
-              </li>
-            </ul>
-            <!-- Cart Button -->
-            <div class="login">
-              <a href="#" class="btn btn-warning text-dark ms-3">Login</a>
-            </div>
-          </div>
+    <!--card-->
+    <section>
+      <h1 class="card-title">Sushis D'Exception</h1>
+      <div class="card">
+        <img src="#" alt="card" />
+        <div class="card-content">
+          <h2 class="card1-title">Dragon</h2>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fuga iste,
+            pariatur culpa harum explicabo eos nostrum nisi. Voluptates dolor
+            repellendus consequuntur voluptatibus facilis animi, quibusdam
+            nesciunt expedita, dolore vel ipsam.
+          </p>
+          <a href="#" class="btn">More</a>
         </div>
-      </header>
-      <style>
-        header {
-          width: auto;
-        }
-
-        .navbar-nav .nav-link {
-          padding-right: 15px;
-          padding-left: 15px;
-        }
-
-        @media (max-width: 992px) {
-          .navbar-nav .nav-link {
-            padding-right: 0;
-            padding-left: 0;
-          }
-
-          .btn {
-            margin-top: 10px;
-          }
-
-          .navbar-collapse {
-            text-align: center;
-          }
-        }
-      </style>
-
-      <!-- home Section -->
-      <section
-        class="home d-flex justify-content-center align-items-center text-white mt-5"
-        style="
-          background-image: url('https://www.wildforsalmon.com/cdn/shop/articles/SpicySalmonSushiBake-85_FEAT_IMG.jpg?v=1676408875');
-          background-size: cover;
-          height: 60vh;
-        "
-      >
-        <div class="w-100 h-100" style="background-color: rgba(0, 0, 0, 0.5)">
-          <div class="d-flex justify-content-center align-items-center h-100">
-            <div class="text-center">
-              <h1 class="fw-bold mb-4">SUSHI CLUB</h1>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <!--js bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!--script js-->
-    <script src="main.js"></script>
+      </div>
+    </section>
   </body>
 </html>
