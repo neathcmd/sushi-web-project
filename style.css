@@ -1,3 +1,4 @@
+<<<<<<< refs/remotes/origin/new
 * {
   margin: 0;
   padding: 0;
@@ -164,3 +165,343 @@ header {
     font-size: 16px;
   }
 }
+=======
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #181818;
+  color: #f8f9fa;
+  line-height: 1.6;
+}
+
+:root {
+  --header-height: 80px;
+}
+
+section {
+  scroll-margin-top: var(--header-height);
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0;
+  background-color: #4caf50; /* Customize the color */
+  z-index: 1000; /* Make sure it appears on top of other elements */
+  transition: width 0.25s ease; /* Smooth animation */
+}
+
+/* Navigation */
+.navbar {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: rgba(17, 24, 39, 0.95);
+  backdrop-filter: blur(8px);
+  padding: 1rem 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.212);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffc107;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #fff;
+}
+
+/* Underline animation for the logo */
+.logo::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Position underline below the text */
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.logo:hover::after {
+  width: 100%;
+  left: 50%; /* Ensures the underline starts from the center */
+}
+
+.nav-links {
+  font-size: 1.1rem;
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #ffc107;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; /* Position underline below the text */
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #fff;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+  left: 50%;
+}
+
+.nav-links a:hover {
+  color: #fff; /* Change text color on hover */
+}
+
+/* Active state */
+.nav-links a.active {
+  color: #fff;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+  left: 50%; /* Ensure the underline starts from the center */
+}
+
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block; /* Show the menu button on smaller screens */
+  }
+
+  .nav-links {
+    display: none; /* Hide the navigation links initially */
+    flex-direction: column; /* Stack the links vertically */
+    position: absolute;
+    top: var(--header-height);
+    right: 0;
+    background-color: rgba(17, 24, 39, 0.95);
+    width: 100%;
+    padding: 1rem 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  }
+
+  .nav-links.active {
+    display: flex; /* Show the navigation links when active */
+  }
+
+  .nav-links a {
+    padding: 1rem;
+    text-align: center;
+  }
+}
+
+/* Home Section */
+.home {
+  height: 60vh;
+  background-image: url("https://www.wildforsalmon.com/cdn/shop/articles/SpicySalmonSushiBake-85_FEAT_IMG.jpg?v=1676408875");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #f8f9fa;
+}
+
+/* Product Section */
+.product-section {
+  padding: 2rem;
+  background-color: #212529;
+  text-align: center;
+}
+
+.product-heading {
+  font-size: 2rem;
+  color: #ffc107;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.5rem;
+  background-color: #ffc107;
+  color: #212529;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e0a800;
+}
+
+/* Product Section */
+.product-section {
+  padding: 2rem 1rem;
+  background-color: #212529;
+  text-align: center;
+}
+
+.product-heading {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+/* Product Cards */
+.product-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-card {
+  background: #181818;
+  color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ffc107;
+}
+
+.product-card h3 {
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  color: #ffc107;
+}
+
+.product-card p {
+  font-size: 1rem;
+  margin: 0 1rem 1rem;
+  color: #ccc;
+}
+
+.product-card .price {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  background-color: #ffc107;
+  color: #212529;
+  font-weight: bold;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: background-color 0.3s;
+}
+
+.product-card .price:hover {
+  background-color: #e0a800;
+}
+
+/* Button Styling */
+.view-details-btn {
+  background-color: #ffc107;
+  color: #212529;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+  background-color: #e0a800;
+}
+
+/* Product Details (Smooth Animation Inside the Card) */
+.product-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: scaleY(0); /* Initial collapsed state */
+  transform-origin: top;
+  transition: max-height 0.5s ease, opacity 0.5s ease, transform 0.5s ease;
+}
+
+.product-card.active .product-details {
+  max-height: 200px; /* Adjust based on content size */
+  opacity: 1;
+  transform: scaleY(1); /* Fully expanded state */
+  padding: 1rem; /* Add padding for visible content */
+}
+>>>>>>> local
